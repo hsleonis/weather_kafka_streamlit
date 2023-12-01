@@ -16,3 +16,33 @@ The producer dashboard takes a location name as input, searches **Accuweather AP
 ## Consumer Dashboard
 The consumer receives the published Weather data from the same Kafka topic and displayes in the consumer dashboard.
 <img src="images/CONSUMER.png">
+
+## How to use
+1. Download the latest Kafka release and extract it: https://www.apache.org/dyn/closer.cgi?path=/kafka/3.6.0/kafka_2.13-3.6.0.tgz
+2. Install dependencies with:
+```python
+pip -r requirements.txt
+```
+3. Goto Kafka directory, to work in local machine, make changes in `config/server.properties` file.
+Set `advertised.listeners` to `PLAINTEXT://localhost:9092`.
+4. Run the following commands in order to start all services in the correct order. Run **Zookeeper** first:
+```python
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
+5. Open another terminal session and run to start **Kafka broker server**:
+```python
+bin/kafka-server-start.sh config/server.properties
+```
+6. Run producer dashboard:
+```python
+streamlit run producer_app.py
+```
+7. Run consumer dashboard:
+```python
+bin/kafka-server-start.sh config/server.properties
+```
+
+Enjoy!
+
+
+
