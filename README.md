@@ -1,2 +1,2 @@
-# Real-time Weather Reporting App with Dashboards
-Real-time weather data from Accuweather APIs using Kafka + Streamlit.
+# Real-time Weather Reporting App
+Real-time weather data from Accuweather APIs using Kafka + Streamlit dashboards.
