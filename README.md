@@ -2,7 +2,7 @@
 Real-time weather data from Accuweather APIs using Kafka + Streamlit dashboards.
 
 ## Producer Dashboard
-<img src="images/CONSUMER.png">
+<img src="images/PRODUCER.png">
 
 ## Consumer Dashboard
-<img src="images/PRODUCER.png">
+<img src="images/CONSUMER.png">
