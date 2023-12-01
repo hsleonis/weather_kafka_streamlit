@@ -39,7 +39,7 @@ streamlit run producer_app.py
 ```
 7. Run consumer dashboard:
 ```python
-bin/kafka-server-start.sh config/server.properties
+streamlit run consumer_app.py --server.port 8503
 ```
 
 Enjoy!
