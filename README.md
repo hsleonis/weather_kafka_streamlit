@@ -33,11 +33,18 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 ```python
 bin/kafka-server-start.sh config/server.properties
 ```
-6. Run producer dashboard:
+6. Go to the app directory and create a `.env` file with following template:
+```python
+WEATHER_API_KEY = "Accuweather API KEY"
+KAFKA_BROKER = "localhost:9092"
+KAFKA_TOPIC = "weather_data"
+KAFKA_GROUP_ID = "weather_consumer_group"
+```
+7. Run producer dashboard:
 ```python
 streamlit run producer_app.py
 ```
-7. Run consumer dashboard:
+8. Run consumer dashboard:
 ```python
 streamlit run consumer_app.py --server.port 8503
 ```
